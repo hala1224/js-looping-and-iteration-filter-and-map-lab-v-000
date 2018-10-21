@@ -2,6 +2,6 @@
 function driversWithRevenueOver(driver, revenue){
   
   
-   return driver.filter( x => x > revenue);
+   return driver.filter( x => x.revenue > revenue);
   
 }
