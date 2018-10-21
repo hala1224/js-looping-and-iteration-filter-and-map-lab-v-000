@@ -21,13 +21,19 @@ function exactMatch(driver, attributeValuePair) {
   
   attr1=attributeValuePair.name;
   attr2=attributeValuePair.revenue;
+  console.log(attributeValuePair.keys);
   
-  if (attr1 !== 'undefined'){
-    
-    const list=driver.filter(x => x.name === attr1)
-    return list;
-    }
-    
-  // const list=driver.filter (x => x.revenue === attr2);
+    const list1=driver.filter(x => x.name === attr1);
+ 
+    const list=driver.filter(x => x.revenue===attr2);
   
+     if(attr1 === 'undefined'){
+       return list1;
+     }
+
+     if(attr2 === 'undefined'){
+
+      return list;
+     }
+
 }
