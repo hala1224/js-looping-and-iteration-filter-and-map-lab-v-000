@@ -35,16 +35,23 @@ function exactMatch(driver, attr) {
 
 function exactMatchToList(driver, attr) {
   
+
+ 
   attr1=attr.name;
   attr2=attr.revenue;
   
   
     if(Object.keys(attr)=='name'){
-        return list1=driver.filter(x => x.name === attr1);
-    } 
-
+        const list1=driver.filter(x => x.name === attr1);
+        return list1.map(function(driver) {
+           return `${driver.name}`;
+   });
+    }
+    // else {
     if(Object.keys(attr) =='revenue'){
-      // console.log('inside if');
-      return list=driver.filter(x => x.revenue===attr2);
+      const list=driver.filter(x => x.revenue===attr2);
+       return list.map(function(driver) {
+           return `${driver.name}`;
+      });
    }
 }
