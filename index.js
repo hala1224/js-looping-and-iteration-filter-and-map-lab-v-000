@@ -22,6 +22,12 @@ function exactMatch(driver, attributeValuePair) {
   attr1=attributeValuePair.name;
   attr2=attributeValuePair.revenue;
   
-  const list=driver.filter (x => x.revenue === attr2);
+  if (attr1 !== 'undefined'){
+    
+    const list=driver.filter(x => x.name === attr1)
+    return list;
+    }
+    
+  // const list=driver.filter (x => x.revenue === attr2);
   
 }
