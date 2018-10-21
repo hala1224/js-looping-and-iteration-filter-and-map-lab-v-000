@@ -8,11 +8,15 @@ function driversWithRevenueOver(driver, revenue){
 
 function driverNamesWithRevenueOver(driver, revenue){
   
-  
+  // Filter the revenue and pass it to map function to extract the name
    
    const list=driver.filter( x => x.revenue > revenue);
-  // console.log(list);
+  
     return list.map(function(driver) {
     return `${driver.name}`;
    });
+}
+
+function exactMatch(drivers, attributeValuePair) {
+  
 }
