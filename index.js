@@ -17,23 +17,18 @@ function driverNamesWithRevenueOver(driver, revenue){
    });
 }
 
-function exactMatch(driver, attributeValuePair) {
+function exactMatch(driver, attr) {
   
-  attr1=attributeValuePair.name;
-  attr2=attributeValuePair.revenue;
-  console.log(attributeValuePair.keys);
+  attr1=attr.name;
+  attr2=attr.revenue;
   
-    const list1=driver.filter(x => x.name === attr1);
- 
-    const list=driver.filter(x => x.revenue===attr2);
   
-     if(attr1 === 'undefined'){
-       return list1;
-     }
+    if(Object.keys(attr)=='name'){
+        return list1=driver.filter(x => x.name === attr1);
+    } 
 
-     if(attr2 === 'undefined'){
-
-      return list;
-     }
-
+    if(Object.keys(attr) =='revenue'){
+      // console.log('inside if');
+      return list=driver.filter(x => x.revenue===attr2);
+   }
 }
